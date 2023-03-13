@@ -153,6 +153,10 @@ func commandShutdown() {
 
 }
 
+func commandInputSwitch() {
+	runCommand("/usr/bin/switch.sh")
+}
+
 var messagePubHandler mqtt.MessageHandler = func(client mqtt.Client, msg mqtt.Message) {
 	log.Printf("Received message: %s from topic: %s\n", msg.Payload(), msg.Topic())
 }
